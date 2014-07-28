@@ -1,0 +1,27 @@
+
+.blank-overlay {
+    background: none repeat scroll 0 0 #000000;
+    opacity: .3;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: block;
+}
+#block-blank{
+    font-family: "Tahoma", sans-serif;
+    background: #ffffff;
+    position: absolute;
+    display: none;
+    z-index: 101;
+    border-radius: 8px;
+    padding:3px;
+    text-shadow: 1px 1px 2px #FFFFFF;
+
+}
+/*
+	==================
+	[MODAL]
+	==================
+*/

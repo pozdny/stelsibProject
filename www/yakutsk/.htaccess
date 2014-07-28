@@ -1,0 +1,42 @@
+DirectoryIndex index.php?action=MainPage
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} (.*)
+RewriteCond %{REQUEST_URI} /$ [NC]
+RewriteRule ^(.*)(/)$ $1 [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^www.yakutsk.stelsib.ru
+RewriteRule (.*) http://yakutsk.stelsib.ru/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(php|html|htm)\ HTTP/
+RewriteRule ^index.(php|html|htm)$ http://yakutsk.stelsib.ru [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /admin\.php\ HTTP/
+RewriteRule ^admin\.php$ /admin/products [R=301,L]
+RewriteRule ^admin$ /admin/products [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^admin/(.*)$ admin.php?action=$1 [L,QSA]
+
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?action=$1 [L,QSA]
+
+
+AddDefaultCharset utf-8
+
+AddType text/x-component .htc
+
+DirectoryIndex index.php index.html
+
+ErrorDocument 400 /error.php?id=400
+ErrorDocument 401 /error.php?id=401
+ErrorDocument 403 /error.php?id=403
+ErrorDocument 404 /error.php?id=404
+ErrorDocument 500 /error.php?id=500
+ErrorDocument 503 /error.php?id=503
+
+
+

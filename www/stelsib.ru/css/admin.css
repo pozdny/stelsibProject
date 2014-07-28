@@ -1,0 +1,56 @@
+/*
+	==================
+	[ HEADER]
+	==================
+*/
+#head-date{
+    width:18%;
+    float: left;
+    padding-top:20px
+}
+
+#head-site{
+    width:20%;
+    float: left;
+    padding-top:5px;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/*
+	==================
+	[ TABLES]
+	==================
+*/
+.submenu_prod td
+{
+    background: #3A90B4;
+    height:30px
+}
+.submenu_prod td .style1, .submenu_prod td a.style9
+{
+    color:#fff;
+    font:normal bold  13px Tahoma;
+}
+.submenu_prod td a.style9:hover{
+    color:#fff;
+}
+fieldset{
+    margin-bottom: 15px;
+    background: #dedddd;
+    padding:10px
+}
+legend a{
+    color:#ed2525;
+}
+.big_block_img{
+    position: relative;
+    padding:5px;
+}
+.del_div_big{
+    width:16px;
+    height: 16px;
+    position: absolute;
+    top:0;
+    right: 0;
+}

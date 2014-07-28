@@ -1,0 +1,9 @@
+<thead>
+<tr>
+    <th>{title}</th>
+    <th>{size}</th>
+    <th>{p1}</th>
+    <th>{p2}</th>
+    <th>{p3}</th>
+</tr>
+</thead>

@@ -1,0 +1,1318 @@
+/*
+	==================
+	[IMPORT FANCYBOX]
+	==================
+*/
+@import url('jquery/jquery.fancybox.css');
+/*
+	==================
+	[IMPORT FONTS]
+	==================
+*/
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+@font-face{
+    font-family: 'open_sansregular';
+    src: url('fonts/open_sans-webfont.eot');
+    src: local('open_sansregular'),
+    url('fonts/open_sans-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/open_sans-webfont.woff') format('woff'),
+    url('fonts/open_sans-webfont.ttf') format('truetype'),
+    url('fonts/open_sans-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'open_sanslight';
+    src: url('fonts/open-sans-light-webfont.eot');
+    src: local('open_sanslight'),
+    url('fonts/open-sans-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/open-sans-light-webfont.woff') format('woff'),
+    url('fonts/open-sans-light-webfont.ttf') format('truetype'),
+    url('fonts/open-sans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'open_sanssemibold';
+    src: url('fonts/open-sans-semibold-webfont.eot');
+    src: local('open_sanssemibold'),
+    url('fonts/open-sans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/open-sans-semibold-webfont.woff') format('woff'),
+    url('fonts/open-sans-semibold-webfont.ttf') format('truetype'),
+    url('fonts/open-sans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*
+	==================
+	[MAIN]
+	==================
+*/
+/*[class*="col-xs"]{
+    background: red;
+}
+[class*="col-md"]{
+    background: blue;
+}*/
+html,
+body {
+    font-family: 'open_sansregular', sans-serif;
+    height: 100%;
+    margin:0 auto;
+    min-width:750px;
+    background: #f2f2f2;
+    font-size: 13px;
+    color:#727272;
+
+
+    /* The html and body elements cannot have any padding or margin. */
+}
+#wrap {
+    background: #f2f2f2;
+    min-height: 100%;
+    /* Negative indent footer by its height */
+    margin: 0 auto -79px;
+    /* Pad bottom by footer height */
+    padding: 0 0 79px;
+    position: relative;
+    overflow:hidden;
+
+}
+
+header{
+    color: #43607d;
+    height:110px;
+    padding: 25px 0 25px;
+    background: #fff;
+}
+
+.container, #content_columns_one {
+    max-width: 978px;
+    padding: 0;
+    position: relative;
+}
+#content_columns_one{
+    margin:0 auto;
+    width:100%;
+}
+/* Set the fixed height of the footer here */
+footer {
+    color: #fff;
+    font-size: 1em;
+    position: relative;
+
+}
+
+#footer-bottom{
+    padding:23px 0;
+    height: 80px;
+    background: #8e8e8e;
+
+}
+a:focus{
+    outline: none;
+}
+/*
+	==================
+	[HEADER]
+	==================
+*/
+header #logo{
+    width:30%;
+    min-width: 232px;
+    height: 58px;
+    background:url('//stelsib.ru/img/main/logo.png') no-repeat;
+    float: left;
+}
+header #header-select{
+    margin-top:15px;
+    width:25%;
+    float: left;
+}
+header .phone{
+    width:24%;
+    line-height: 1.5;
+    text-align: right;
+    color:#31708f;
+    font-family: 'Tahoma', sans-serif;
+    float: right;
+    margin-top:-20px
+}
+header .email{
+    display: block;
+    float:right;
+    margin-top: 0px;
+    font-size: 1.1em;
+}
+header .phone a{
+    color:inherit;
+}
+header .phone a,
+header .phone a:hover
+{
+    text-decoration: none;
+}
+header .phone #txt_b{
+    color: #686868;
+    font-family: 'open_sanslight', sans-serif;
+    font-size: 11px;
+}
+header .phone span:first-of-type{
+    color: #000000;
+    font-size: 26px;
+}
+header .phone span:last-of-type{
+    color: #000000;
+    font-size:26px;
+}
+header .phone .phone-icon{
+    float: left;
+    width:36px;
+    height: 36px;
+    margin-top:17px;
+}
+header .phone .phone-number{
+    float: right;
+    margin-top:0px;
+
+}
+header .phone .job-time{
+    float: left;
+    width: 100%;
+    color: #686868;
+    font-family: 'open_sanslight', sans-serif;
+    font-size: 11px;
+}
+header #header-hello{
+    position: relative;
+    margin-bottom:15px;
+    margin-top:-25px
+}
+
+/*
+	==================
+	[NAVBAR]
+	==================
+*/
+#navbar.navbar{
+    border:none;
+    margin-top:8px;
+    margin-bottom:30px;
+    font-size: 1.1em;
+    border-radius: 0;
+}
+#navbar.navbar.navbar-default{
+    background: #1e71ba;
+}
+#navbar .container > .navbar-collapse{
+    padding:0
+}
+#navbar.navbar.navbar-default .navbar-nav > li > a{
+    color:#fff;
+    border:1px solid transparent;
+    border-width:0 1px
+}
+
+#navbar.navbar.navbar-default .navbar-nav > li.li_MainPage > a{
+    background:#418cce
+}
+#navbar.navbar.navbar-default .navbar-nav > li.li_about > a{
+    background:#6cb44d
+}
+#navbar.navbar.navbar-default .navbar-nav > li.li_arhivnye_stellazhi > a{
+    background:#f78f4a
+}
+#navbar.navbar.navbar-default .navbar-nav > li.li_oplata > a{
+    background:#bf689f
+}
+#navbar.navbar.navbar-default .navbar-nav > li.li_contacts > a{
+    background:#6a6d9e
+}
+#navbar.navbar.navbar-default .navbar-nav > li.li_prices > a{
+    background:#e87285
+}
+#navbar.navbar.navbar-default .navbar-nav > li.li_news > a{
+    background:#418cce
+}
+#navbar.navbar.navbar-default .navbar-nav > li.active > a,
+#navbar.navbar.navbar-default .navbar-nav > li > a:hover,
+#navbar.navbar.navbar-default .navbar-nav > li > a:active,
+#navbar.navbar.navbar-default .navbar-nav > li > a:focus{
+    background:#1f6fb6;
+
+}
+#navbar.navbar.navbar-default .navbar-nav > li.active > a{
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+}
+
+#navbar .container{
+    position: relative;
+}
+#navbar .search-form{
+    width:19%;
+    position: absolute;
+    top:4px;
+    right: 0;
+}
+#navbar .search-form .search-inner{
+    position: relative;
+;
+}
+#navbar .search-form .search-inner .form-control{
+    border-radius: 16px;
+    border-color:#1c6aaf;
+    padding-top:5px;
+    padding-bottom:5px;
+
+}
+#navbar #inputFild{
+    margin:6px 0 6px;
+    color:#ffffff;
+    background: rgba(28, 107, 177, 0.90);
+    padding-right: 25px;
+    box-shadow: 0 4px 2px -2px rgba(78,153,219,0.8),inset 2px 2px 1px 0px rgba(66,66,66,0.4);
+
+}
+#navbar #inputFild.placeholded{
+    color:#fff
+}
+#navbar #inputFild:focus{
+    outline: 0;
+    color:#ffffff;
+}
+
+#navbar .search-form input[type="text"]{
+    height: 28px;
+}
+#navbar .button-i-search, #inputIcon{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top:8px;
+    right:10px;
+
+}
+/*
+	==================
+	[CONTENT]
+	==================
+*/
+#content-section{
+    height: auto;!important;
+    margin-bottom:10px;
+}
+.row-m-10{
+    margin-top:10px;
+
+}
+.arh-img, .pol-img{
+    height: 258px;
+}
+.title, .date,
+#sidebar .li_menuActiv a span,
+#sidebar .li_menuActiv a span , #sidebar-admin .li_menuActiv span,
+#navbar.navbar, .page-header,
+.prod-inner-title, .elem-inner-title{
+    font-family: 'open_sanssemibold',  sans-serif;
+}
+.green-label{
+    background: #6cb44d;
+}
+[class*="-label"]{
+    padding:4px 0px;
+    font-size: 1.2em;
+    color:#ffffff;
+}
+.promo-link, [class*="-label"]{
+    text-align: center;
+}
+.page-header {
+    border:none;
+    display: block;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+.page-header h1 {
+    display: inline-block;
+    line-height: 24px;
+    margin: 5px 0 20px;
+    color:#1f6db2
+
+}
+#content-section a{
+    text-decoration: underline;
+}
+/*......img..........*/
+.arh-img, .pol-img{
+    display: block;
+    width:358px;
+    background: url('//stelsib.ru/img/main/stellag.png') no-repeat;
+}
+.arh-img{
+    background-position: 0 0;
+}
+.pol-img{
+    background-position: -358px 0;
+}
+.pr-5{
+    padding-right:5px;
+}
+.pl-0{
+    padding-left:0px;
+}
+.content-img{
+    float: right;
+    width: 52%;
+    padding:20px 40px 0 0;
+    line-height: 1.1;
+}
+.content-img .title{
+    font-size: 1.4em;
+    color:#4c4c4c;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.content-img .content{
+    color:#706f6f;
+}
+.arh-img:hover .content-img .title,
+.pol-img:hover .content-img .title{
+    text-decoration: underline;
+}
+/*......promo..........*/
+.promo-block{
+    background: url('//stelsib.ru/img/main/s-shad.png') center bottom no-repeat;
+    height: auto;
+    padding-bottom: 7px;
+}
+.promo-inner{
+    width:100%;
+    min-width:231px;
+    height: 252px;
+    background: #ffffff;
+}
+.promo-inner-top{
+    overflow: hidden;
+}
+.promo-label, .promo-link{
+    width:50%;
+    height: 33px;
+    float: left;
+}
+.promo-label{
+    width:105px;
+    height: 33px;
+}
+.promo-link{
+    padding:6px 0px;
+
+}
+.promo-link a{
+    color:#a0a0a0;
+    text-decoration: underline;
+}
+.promo-link a:hover{
+    color: #484848;
+}
+
+.promo-inner-content{
+    height: 219px;
+    padding:5px 0 20px;
+
+}
+#content-section a.promo-inner-content{
+    text-decoration: none;
+}
+.promo-inner-content ~ div{
+    width:100%
+}
+
+.promo-inner-content .prod-inner-image,
+.elem-inner-image
+{
+    width:122px;
+    height: 139px;
+}
+.elem-inner-image img
+{
+    width:120px;
+}
+.promo-inner .prod-inner-image img{
+    width:120px;
+}
+.prod-inner-image{
+    margin:0 auto 5px;
+}
+.prod-inner-title,.prod-inner-price
+{
+    text-align: center;
+}
+.prod-inner-title, .elem-inner-title{
+    color: #1F6DB2;
+}
+.prod-inner-title
+{
+    font-size: 1.2em;
+}
+.elem-inner-title{
+    font-size: 1.5em;
+}
+.prod-inner-price,
+.elem-inner-price{
+    color:#a0a0a0;
+    font-size: 0.9em;
+}
+.prod-inner-price span,
+.elem-inner-price span{
+    color:#cd1d1d;
+    font-size: 1.5em;
+}
+/*.............news.............*/
+.blockContentNewsInner{
+
+}
+.blockContentNews .blockContentNewsTitle{
+    color:#1f6db2;
+    font-size:1.5em;
+    margin:20px 0 10px
+}
+.blockContentNewsInner .oneNews{
+    margin-bottom: 7px;
+}
+#content-section .blockContentNewsInner .oneNews a.title{
+    display: block;
+    color:#3e3e3e;
+    line-height: 1;
+    margin-bottom:5px;
+}
+.blockContentNewsInner .oneNews .date{
+    color:#ffffff;
+    font-size: 0.8em;
+    background: #bf689f;
+    width:28%;
+    padding:1px 2px;
+    text-align: center;
+}
+#content-section .news_title a, #content-section .blockContentNewsInner .oneNews a{
+    text-decoration: none;
+}
+#content-section .news_title a:hover, #content-section .blockContentNewsInner .oneNews a:hover{
+    text-decoration: underline;
+}
+/*...........blockContentTxt.............*/
+.blockContentTxt h1{
+    color:#1f6db2
+}
+
+/*..............row-pop...............*/
+.row-pop{
+    background: #fff;
+}
+.row-pop .pop-menu-left, .row .menu-left {
+    width:21%
+}
+.row-pop .pop-content, .row #content-section.col-xs-9{
+    width:79%;
+    overflow: hidden;
+}
+/*.pop-menu-left{
+    max-width:210px;
+}*/
+.pop-menu-left .sidebar, .pop-menu-left .sidebar li, .pop-menu-left .sidebar li ul{
+    list-style-type: none;
+    padding:0
+}
+.pop-menu-left .sidebar{
+    margin-top:10px
+}
+.pop-menu-left .sidebar .li_menu{
+    margin-bottom:5px;
+}
+.pop-menu-left .sidebar .li_menu span{
+    font-weight: bold;
+}
+.pop-menu-left .submenu .li_submenu span{
+    font-weight: normal;
+}
+.pop-menu-left .li_menu > a span{
+    color: #474747;
+}
+.pop-menu-left .submenu .li_submenu a{
+    color:#7b7b7b
+}
+.onePop{
+    padding:20px 0 20px;
+}
+[class*="inner-content"]{
+    display: block;
+    position: relative;
+
+}
+[class*="inner-content"]:hover{
+    color:#3a7dbf;
+    text-decoration: none;
+}
+[class*="inner-content"]:hover .prod-inner-title{
+    text-decoration: underline;
+}
+
+.pop-border{
+    position: absolute;
+    height: 217px;
+    width:1px;
+    background:#eee;
+    top:0;
+    left:-9px;
+}
+.pop-content .prod-inner-image
+{
+    width:142px;
+    height: 162px;
+}
+/*..............bottom-info...............*/
+.container.bottom-info{
+    padding:30px 0;
+}
+/*.............lupa..........................*/
+.fancyover {
+    position:absolute;
+    z-index:9;
+    width:120px;
+    height:150px;
+    background:url("//stelsib.ru/img/icons/zoom.png") no-repeat 50% 50%;
+    cursor:pointer;
+}
+.fancyoverB {
+    position:absolute;
+    z-index:9;
+    width:120px;
+    height:120px;
+    background:url("//stelsib.ru/img/icons/zoom.png") no-repeat 50% 50%;
+    cursor:pointer;
+}
+/*
+	==================
+	[ CATALOG]
+	==================
+*/
+/*......promo..........*/
+.elem-block{
+    background: url('//stelsib.ru/img/main/e-shad.png') center bottom no-repeat;
+    height: auto;
+    padding-bottom:7px;
+    margin:6px 0 6px;
+}
+.elem-inner{
+    width:100%;
+    height: auto;
+    background: #ffffff;
+    padding:20px;
+
+}
+.elem-block, .elem-inner, .elem-inner-image{
+    overflow: hidden;
+}
+
+.elem-inner-image
+{
+    margin:6px 15px 6px 6px;
+    position:relative;
+    border: 1px solid #b9c2d2;
+    float: left;
+}
+
+.elem-inner-image:hover
+{
+    position:relative;
+    -webkit-box-shadow: #adaeae 0px 0px 8px;
+    -moz-box-shadow: #adaeae 0px 0px 8px;
+    box-shadow: #adaeae 0px 0px 8px;
+    cursor:pointer
+}
+.elem-inner-txt{
+    margin-top:10px
+}
+.block-single-img{
+    margin:10px 0
+}
+.sub-block-b{
+    height: 170px;
+    width:134px;
+    margin-right:3px;
+    text-align: center;
+    float: left;
+    line-height: 1em;
+    color:#34495E;
+    text-decoration: underline;
+}
+.sub-block
+{
+    width:122px;
+    height:122px;
+    margin:6px;
+    position:relative;
+    border: 1px solid #b9c2d2;
+    float: left;
+}
+.sub-block:hover
+{
+    position:relative;
+    -webkit-box-shadow: #adaeae 0px 0px 8px;
+    -moz-box-shadow: #adaeae 0px 0px 8px;
+    box-shadow: #adaeae 0px 0px 8px;
+    cursor:pointer
+}
+/*
+	==================
+	[ SIDEBAR]
+	==================
+*/
+
+#sidebar ul, #sidebar-admin ul{
+    margin:0;
+    padding: 0;
+}
+#sidebar ul li, #sidebar-admin ul li{
+    list-style-type: none;
+    width:100%;
+}
+#sidebar .li_menu, #sidebar .li_menuActiv,
+#sidebar-admin .li_menu, #sidebar-admin .li_menuActiv{
+    margin-bottom:5px
+}
+#sidebar .li_menu>a span, #sidebar .li_menuActiv>a span,
+#sidebar-admin .li_menu>a span, #sidebar-admin .li_menuActiv>a span{
+    padding:4px 3px;
+    height:30px;
+    font-size:1.2em;
+    color:#1f6db2;
+}
+#sidebar .li_submenu>a span, #sidebar .li_submenuActiv>a span,
+#sidebar-admin .li_submenu>a span, #sidebar-admin .li_submenuActiv>a span{
+    padding:5px 3px;
+    height:26px;
+}
+#sidebar .li_submenu a span, #sidebar-admin .li_submenuActiv a span,
+#sidebar .li_menu a span, #sidebar .li_menuActiv a span{
+    display: block;
+}
+#sidebar li>a span:hover, #sidebar-admin li>span:hover{
+    cursor: pointer;
+}
+#sidebar li>a span{
+    text-decoration:none;
+}
+#sidebar .li_menu>a:hover,
+#sidebar .li_menuActiv>a:hover
+{
+    color:#1f6db2;
+}
+
+#sidebar .li_menuActiv>a span, #sidebar-admin .li_menuActiv>span{
+    background: #EEEDED;
+}
+#sidebar .li_menuActiv>a,
+#sidebar-admin .li_menuActiv>a{
+    text-decoration: underline;
+    color:#1f6db2;
+}
+
+#sidebar .li_submenu>a span , #sidebar-admin .li_submenu span,
+#sidebar .li_submenuActiv>a span, #sidebar-admin .li_submenuActiv span{
+    font-family: 'open_sansregular', sans-serif;
+    font-size:1em;
+    padding-left:15px;
+}
+#sidebar .li_submenu>a span , #sidebar-admin .li_submenu span
+{
+    color:#706f6f;
+}
+#sidebar .li_submenu>a:active,
+#sidebar .li_submenu>a:focus{
+    color:#706f6f;
+}
+#sidebar .li_submenuActiv>a span,
+#sidebar-admin .li_submenuActiv span{
+    color:#6cb44d;
+}
+#sidebar .li_submenu a span, #sidebar-admin .li_submenu a span{
+    background:url("//stelsib.ru/img/nav/liActiv.gif") 0 10px no-repeat;
+
+}
+#sidebar .li_submenuActiv a span, #sidebar-admin .li_submenuActiv a span{
+    background:url("//stelsib.ru/img/nav/liActiv.gif") 0 10px no-repeat #fff;
+    color:#6cb44d
+}
+#sidebar .li_submenuActiv>a:hover, #sidebar-admin .li_submenuActiv>a:hover{
+    background:#fff url("//stelsib.ru/img/nav/liActiv.gif") 0 10px no-repeat;
+    color:#6cb44d
+}
+#sidebar .li_menu>a:active,
+#sidebar .li_menu>a:focus{
+    color:#1f6db2;
+}
+/*
+	==================
+	[ICONS]
+	==================
+*/
+[class*="fa-custom"]{
+    background: url("//stelsib.ru/img/icons/fa-castom.png") no-repeat;
+    width:36px;
+    height: 36px;
+}
+.fa-custom-phone{
+    background-position: 0 0 ;
+}
+
+/*
+	==================
+	[FOOTER]
+	==================
+*/
+.schet
+{
+    width:90px;
+    height:32px;
+    margin:2px;
+    float:right;
+    display:inline;
+
+}
+#footer-bottom .block-true
+{
+    visibility:visible;
+}
+#footer-bottom .block-false
+{
+    visibility:hidden;
+}
+/*
+	==================
+	[CUSTOM SELECT BUTTON]
+	==================
+*/
+header #header-select span{
+    color:#b6b6b6;
+
+    width:145px;
+    text-align: center;
+}
+header #header-select .jq-selectbox__select{
+    border: 1px solid #b6b6b6;
+    height: 32px;
+    background: none;
+    box-shadow: none;
+    line-height: 2.3;
+    padding-left:15px;
+    padding-right:30px;
+    width:145px;
+    border-radius: 16px;
+    font-size: 1em;
+}
+header #header-select .jq-selectbox.jqselect .jq-selectbox__select-text{
+    color:#1f6db2
+}
+header #header-select .jq-selectbox.jqselect.changed .jq-selectbox__select-text{
+    color:#1f6db2
+}
+header #header-select .jq-selectbox__trigger{
+    border-left: none;
+}
+header #header-select .jq-selectbox__trigger-arrow{
+    border-top: 5px solid #b6b6b6;
+    top:13px;
+    opacity: 1;
+    right:15px;
+}
+header #header-select .jq-selectbox__dropdown{
+    top:32px
+}
+/*
+	==================
+	[BLOCKQUOTE]
+	==================
+*/
+blockquote {
+    padding: 15px 20px;
+    margin: 0;
+    border-left: 5px solid #58A618;
+    background: #fff;
+    font-size: 12px;
+}
+/*
+	==================
+	[ BREADCRUMB]
+	==================
+*/
+#breadcrumb{
+    margin: 0px 0 15px;
+    font-size: 0.9em;
+
+}
+#breadcrumb ul{
+    margin: 0;
+    padding:0
+}
+#breadcrumb a{
+    text-decoration: underline;
+    color:#727272;
+}
+#breadcrumb a:hover{
+
+}
+
+/*
+	==================
+	[ NAVPAGE]
+	==================
+*/
+.navpage {
+    color: #727272;
+    margin: 30px 0 0;
+}
+.navpage .titleList {
+    margin-left: -16px;
+}
+.navpage li {
+    display: inline;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.navpage a:link, .navpage a:visited {
+    color: #727272;
+    text-decoration: none;
+}
+.navpage a:hover, .navpage a:focus {
+    text-decoration: underline;
+}
+.navpage .current {
+    background: none repeat scroll 0 0 #1E71BA;
+    display: inline-block;
+    padding: 3px 7px;
+}
+.navpage .current {
+    color: #FFFFFF;
+    cursor: default;
+    text-decoration: none;
+}
+/*
+    ==================
+    [TABLES]
+    ==================
+*/
+.table{
+    background: #fff;
+}
+.table > thead > tr > th, .table > tbody > tr > td{
+    border-color:#ADADAD
+}
+[class*="-elem"] thead th{
+    background: #1f6db2;
+    color:#ffffff;
+    font-size:0.9em
+}
+[class*="-elem"] tr:nth-of-type(even) {
+    background: #E7EAEB;
+}
+.table-elem3 tr:nth-of-type(even){
+    background: #ffffff;
+}
+[class*="-elem"] thead tr th, [class*="-elem"] tbody tr td{
+    text-align: center;
+    vertical-align: middle;
+}
+.table-elem4 thead th:first-of-type, .table-elem4 tbody td:first-of-type,
+.table-elem-sub thead th:first-of-type, .table-elem-sub tbody td:first-of-type{
+    text-align: left;
+}
+.table-elem4 tbody td:last-of-type,
+.table-elem-sub tbody td:last-of-type{
+    text-align: right;
+}
+.table-elem4 .tr-bold{
+    font-weight: bold;
+}
+.table-elem4 tr.tr-elem4 td,
+.table-elem-sub tr.tr-elem4 td{
+    text-align: center;
+    background: #d6d6d6;
+    font-weight: bold;
+}
+.table-elem4 tr.tr-elem4-1 td, .table-elem4 tr.tr-elem4-2 td{
+    text-align: center;
+    background: #ffffff;
+    font-weight: bold;
+}
+
+.table-elem3 tbody tr td, .table-elem tbody tr:first-of-type td:nth-child(1){
+    vertical-align: middle;
+}
+.table-elem tbody tr:first-of-type td:nth-child(2)
+{
+    font-weight: normal;
+    text-align: center;
+}
+.table-elem tbody td:nth-child(n+2),
+.table-elem-sub tbody td:nth-child(n+3),
+.table-elem-sub tbody tr.tr-bold>td:nth-child(n+2){
+    text-align: right;
+    font-weight: bold;
+}
+.table-elem2{
+    margin:0 auto;
+    width:40%;
+}
+#myTabContent{
+    margin-top:10px;
+}
+#myTab li a{
+    font-weight: bold;
+}
+/*
+	==================
+	[NEWS]
+	==================
+*/
+.news_cont
+{
+    width:100%;
+    margin-top:5px;
+}
+.news_block
+{
+    width:98%;
+    border-bottom:solid 1px #CCC;
+    padding:5px;
+    margin-bottom:5px;
+    float:left;
+    position:relative;
+
+}
+.news_block .news_title{
+    font-size: 1.1em
+}
+.news_block .news_title, .news_block .news_title a{
+    color: #3a3a3a;
+}
+#img_block
+{
+    width:90px;
+    height:90px;
+    float:left;
+    margin:0 6px 8px 0;
+    position:relative;
+    border: 1px solid #b9c2d2;
+
+}
+#img_block:hover
+{
+    position:relative;
+    -webkit-box-shadow: #adaeae 0px 0px 6px;
+    -moz-box-shadow: #adaeae 0px 0px 6px;
+    box-shadow: #adaeae 0px 0px 6px;
+    behavior: url(http://xn--d1aadmjfencb.xn--p1ai/css/PIE.htc);
+}
+.news_date
+{
+    width:96px;
+    float:left;
+}
+.imgB
+{
+    width:100px;
+    overflow:hidden;
+    float:left
+}
+.cB
+{
+    overflow:hidden;
+    float:left;
+}
+/*
+	==================
+	[STYLES]
+	==================
+*/
+h1{
+    font-size:1.5em
+}
+h2{
+    font-size:1.3em;
+}
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: none;
+    outline-offset: -2px;
+}
+#content-section ul li{
+    list-style-image: url("//stelsib.ru/img/nav/liActiv.gif");
+}
+#content-section ul{
+    padding-left:13px;
+}
+.style1
+{
+    font-weight:bold;
+    color: #000;
+    text-decoration:none
+}
+.style3
+{
+    font: bold 11px Tahoma;
+    color:#881526;
+    text-decoration:none
+}
+.style5
+{
+    font-size: 0.9em;
+    text-decoration:none;
+    margin-left:15px;
+}
+.style7
+{
+    text-decoration:none
+}
+.hilight {
+    font: bold 14px Tahoma,Geneva,sans-serif;
+    width: auto;
+}
+.bluelink, a.bluelink:hover {
+    color: #0000FF;
+    font: 14px Tahoma,Geneva,sans-serif;
+    text-decoration: underline;
+}
+.dotted {
+    border-bottom: 1px dotted #000000;
+}
+.text10{
+    font-size: 10px;
+}
+.text13{
+    font-size: 13px;
+}
+.text14{
+    font-size: 14px;
+}
+.text15{
+    font-size: 15px;
+}
+.bluelink_navy{
+    color:#1F6DB2
+}
+/*
+    ==================
+    [MODAL]
+    ==================
+*/
+#loginForm .modal-footer{
+    margin-top:0px
+}
+/*
+    ==================
+    [DIFF]
+    ==================
+*/
+#buttonEdit {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+    clear: both;
+}
+#buttonEdit a{
+    float: right;
+    height: 20px;
+    width: 20px;
+    color:#6cb44d
+}
+#buttonEdit a:hover{
+    color:#337317
+}
+.form-control{
+    border-radius: 1px;
+}
+
+/*
+	==================
+	[ORDER]
+	==================
+*/
+#order_online, #order_backcall{
+    width:125px;
+    position: fixed;
+    right: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#ffffff;
+    text-align: center;
+    box-shadow: -2px 2px 2px 0px rgba(66,66,66,0.4);
+}
+#order_online{
+    background: #e87285;
+    bottom:53%;
+    padding:13px 5px;
+    margin-bottom:20px
+}
+#order_backcall{
+    background: #f78f4a;
+    bottom:47%;
+    font-size:12px;
+    padding:5px 13px;
+}
+#order_online:hover, #order_backcall:hover{
+    cursor: pointer;
+    width:128px
+}
+
+#order_online .fa, #order_backcall .fa{
+    font-size:1.6em;
+    margin-right: 2px;
+    vertical-align:bottom ;
+}
+#order_online .fa{
+    line-height: 0.8;
+
+}
+#order_backcall .fa{
+    line-height: 1.8;
+    width:21px;
+    float: left;
+}
+#order_backcall .cen{
+    float: left;
+}
+#blankFormPred{
+    margin-top:3px
+}
+.redStar{
+    color:red
+}
+span.error{
+    position: absolute;
+    left:280px;
+    bottom:5px;
+    display: block;
+    width:100%;
+    padding:3px;
+    color:red
+
+}
+span.error i.fa, #resultOrder{
+    color:#6CB44D
+}
+#resultOrder, #resultOrderBack{
+    width:100%;
+    height: 22px;
+    margin-top:-5px;
+    margin-bottom:8px;
+    text-align: center;
+    float: left;
+}
+#resultOrderInner{
+    border:1px solid #6CB44D;
+    display:none;
+    color:#6CB44D;
+    font-weight: bold;
+}
+#blankButton, #blankButtonBack{
+    width:100px;
+    margin-right: 15px;
+}
+#myModalPred .modal-body{
+    padding-top:0
+}
+#myModalPred .modal-header{
+    padding-bottom:5px
+}
+/*
+	==================
+	[GRID]
+	==================
+*/
+
+@media (min-width: 768px) {
+    .container{
+
+    }
+
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    .container{
+
+    }
+    header #logo{
+        width:35%;
+    }
+    header .phone{
+        width:33%;
+    }
+
+    #navbar .nav > li > a{
+        padding-left:9px;
+        padding-right:9px
+    }
+    .blockContentNewsInner .oneNews .date{
+        width:35%
+    }
+    .pop-content .prod-inner-image{
+        margin-left:-11px;
+    }
+    #sidebar .li_menu > a span,
+    #sidebar .li_menuActiv > a span{
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 767px) {
+    .container{
+
+    }
+    header #logo{
+        width:35%;
+    }
+    header .phone{
+        width:33%;
+    }
+    .spec-header .text-muted{
+        font-size: 0.9em;
+    }
+
+    .row{
+        margin-right: 0px;
+        margin-left: 0px
+    }
+    #navbar .container > .navbar-header{
+        margin:0
+    }
+    #navbar .search-form{
+        left:9px;
+        width:30%;
+    }
+    #navbar .container > .navbar-collapse{
+        margin:0
+    }
+    .blockContentNewsInner .oneNews .date{
+        width:35%
+    }
+    .pop-content .prod-inner-image{
+        margin-left:-11px;
+    }
+    #sidebar .li_menu > a span,
+    #sidebar .li_menuActiv > a span{
+        font-size: 1.1em;
+    }
+}
+.modal-open{
+    overflow:auto;
+}
+.modal{
+    overflow-y:auto;
+    position: absolute;
+}
+

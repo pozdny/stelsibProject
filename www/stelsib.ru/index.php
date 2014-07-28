@@ -3,7 +3,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 //определение пути до файла
-define('HOST_NAME', 'stelsib.ru');
+define('HOST_NAME', 'stelsib_new');
 if(HOST_NAME == 'stelsib.ru'){
     $ch = '/';
 }

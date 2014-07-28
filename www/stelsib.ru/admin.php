@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
 }
 
 //определение пути до файла
-define('HOST_NAME', 'stelsib.ru');
+define('HOST_NAME', 'stelsib_new');
 if(HOST_NAME == 'stelsib.ru'){
     $ch = '/';
 }
@@ -60,6 +60,7 @@ elseif(isset($arResult->WRONGDATA) && $arResult->WRONGDATA){
 else{
     //очистка данных от обратных слешей
     strips($arResult->DATA);
+    $rights = '';
     $Pages = $arResult->DATA["TopMenu"];
     $Catalog = $arResult->DATA["Catalog"];
     if  ($arResult->UsernameEnter["enter"] == "Y" && !isset($_SESSION['once']) && isset( $_COOKIE['autologin'] ) ) autoLogin();
@@ -78,7 +79,7 @@ else{
         else
             $arResult->ACTION = FIRST_PAGE;
     }
-
+    $content = '';
     $actions = array(
         'logout',
         'pages',
@@ -109,8 +110,7 @@ else{
     }
     $action = $arResult->ACTION;
     switch($action){
-        case 'logout':
-            $content = logout();;
+        case 'logout': logout();
             break;
         case 'pages':
             $content = pages(ALL_R);
@@ -136,38 +136,26 @@ else{
         case 'edit_content':
             $content = edit_content(ALL_R);
             break;
-        case 'get_edit_content':
-            $content = get_edit_content();
-            break;
         case 'edit_metatags':
             $content = edit_metatags(ALL_R);
-            break;
-        case 'get_edit_metatags':
-            $content = get_edit_metatags(ALL_R);
             break;
         case 'edit_metatags_other':
             $content = edit_metatags_other(ALL_R);
             break;
-        case 'add_position':
-            $content = add_position(ALL_R);
+        case 'add_position': add_position(ALL_R);
             break;
         case 'edit_table':
             $content = edit_table(ALL_R);
             break;
-        case 'get_edit_tab':
-            $content = get_edit_tab(ALL_R);
-            break;
         case 'edit_catalog':
             $content = edit_catalog(ALL_R);
             break;
-        case 'get_edit_complect':
-            $content = get_edit_complect();
+        case 'get_edit_complect': get_edit_complect();
             break;
         case 'edit_submenu':
             $content = edit_submenu();
             break;
-        case 'get_edit_images':
-            $content = get_edit_images();
+        case 'get_edit_images':get_edit_images();
             break;
         case 'edit_news':
             $content = edit_news(ALL_R);
@@ -214,7 +202,7 @@ function left()
     $li = '';
 
     $action = $arResult->ACTION;
-    foreach($AdminMenu as $key => $menu){
+    foreach($AdminMenu as  $menu){
         $eng_menu   = $menu["eng"];
         $title_menu = $menu["title"];
         ($eng_menu == $action || ((in_array($action, $array_pages)) && $eng_menu == $array_pages[0])
@@ -243,7 +231,7 @@ function getTitle(){
     $AdminMenu = $arResult->DATA["AdminMenu"];
     $action = $arResult->ACTION;
     $title = '';
-    foreach($AdminMenu as $key => $value){
+    foreach($AdminMenu as $value){
         $eng_menu   = $value["eng"];
         $title_menu = $value["title"];
         if($eng_menu == $action || ((in_array($action, $array_pages)) && $eng_menu == $array_pages[0])
@@ -262,7 +250,7 @@ function getTitle(){
     return $titleblock;
 }
 
-function pages($r)
+function pages()
 {
    // access();
    // access_rights($r);
@@ -307,9 +295,6 @@ function edit_catalog($r){
     }
     elseif($table == 'submenu'){
         $html = edit_submenu();
-    }
-    elseif($table == 'all'){
-        $html = edit_all();
     }
     return $html;
 }

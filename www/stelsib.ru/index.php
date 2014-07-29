@@ -24,8 +24,9 @@ $_SESSION['host_name'] = $host;
 $dir_main_site = FULL_PATH.MAIN_SITE.'/';
 
 define ( 'DIR_PATH', $dir_main_site );
-
-require_once(DIR_PATH.'include/config_host.php');
+//подключаем файл с зависимостями
+require_once('vendor/autoload.php');
+require_once('include/config_host.php');
 
 define ( 'HOME_PATH', $home_url );
 define ( 'HOST', $host );
@@ -35,7 +36,7 @@ define ( 'REG_ENG', $reg_eng );
 // подключаем config.php
 require_once('include/config.php');
 //подключаем файлы
-require_once(DIR_PATH.'include/include.php');
+require_once('include/include.php');
 
 
 $time_start = microtime(true);

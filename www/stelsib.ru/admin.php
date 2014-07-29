@@ -25,7 +25,7 @@ $_SESSION['host_name'] = $host;
 $dir_main_site = FULL_PATH.MAIN_SITE.'/';
 define ( 'DIR_PATH', $dir_main_site );
 
-require_once(DIR_PATH.'include/config_host.php');
+require_once('include/config_host.php');
 
 define ( 'HOME_PATH', $home_url );
 define ( 'HOST', $host );
@@ -35,7 +35,7 @@ define ( 'REG_ENG', $reg_eng );
 // подключаем config.php
 require_once('include/config.php');
 
-require_once(DIR_PATH.'include/include_admin.php');
+require_once('include/include_admin.php');
 $session_current_id = session_id();
 $arResult = getArResult();
 if(((isset($arResult->UsernameEnter["enter"]) &&  $arResult->UsernameEnter["enter"] != "Y") || !isset($arResult->UsernameEnter["enter"])) && !isset($_SESSION['once']) && isset( $_COOKIE['superadmin'] )){
@@ -196,7 +196,7 @@ function left()
     $array_pages = array();
     $array_products = array();
     $array_dif_tab = array();
-    require(DIR_PATH.'include/arrays.php');
+    require('include/arrays.php');
     global $arResult;
     $AdminMenu = $arResult->DATA["AdminMenu"];
     $li = '';
@@ -226,7 +226,7 @@ function getTitle(){
     $array_pages = array();
     $array_products = array();
     $array_dif_tab = array();
-    require(DIR_PATH.'include/arrays.php');
+    require('include/arrays.php');
     global $arResult;
     $AdminMenu = $arResult->DATA["AdminMenu"];
     $action = $arResult->ACTION;
